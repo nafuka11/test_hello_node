@@ -183,8 +183,14 @@ test_server_no_crash ex09/http-json-api-server.js 8080 "/api/unixtime?iso=2020-1
 test_server_no_crash ex09/http-json-api-server.js 8080 "/api/invalidpath"
 test_server_no_crash ex09/http-json-api-server.js 8080
 
+# invalid HTTP method
+print_case "test invalid HTTP method(POST)"
+launch_server ex09/http-json-api-server.js 8080
+curl -X POST 'http://localhost:8080/api/unixtime?iso=2020-12-15T17:10:15.474Z'
+kill_server $!
+
 # invalid port number
-print_case "test invalid port number(aaaa)"
+print_case "\ntest invalid port number(aaaa)"
 node ${PROJECT_DIR}/ex09/http-json-api-server.js aaaa
 
 print_case "\ntest invalid port number(11111111111111111)"
