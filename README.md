@@ -20,13 +20,24 @@ hello_node のテスターです。
 
 1. テストを実行
 
-   `test_hello_node` のディレクトリに移動し、
+   `test_hello_node` のディレクトリに移動してからスクリプトを実行します。
 
-   ```
-   ./grademe.sh
-   ```
+   - 全てのテストを実行したい場合
 
-   を実行してください。
+     ```bash
+     ./grademe.sh
+     ```
+
+   - 一部のテストを実行したい場合
+
+     exerciseを指定することができます。
+
+     ```bash
+     # ex00をテスト
+     ./grademe.sh ex00
+     # ex00から05までテスト
+     ./grademe.sh ex{00..05}
+     ```
 
 ## 注意
 
