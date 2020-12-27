@@ -152,11 +152,11 @@ test_ex07 () {
 	print_header ex07
 	test_no_crash ex07_ok          ex07/async-http-collect.js http://abehiroshi.la.coocan.jp/ http://httpbin.org/user-agent http://api.thecatapi.com/v1/images/search
 	test_no_crash ex07_no_arg      ex07/async-http-collect.js
-	test_no_crash ex07_many_arg    ex07/async-http-collect.js http://www.google.com/ http://www.google.com/ http://www.google.com/ http://www.google.com/
+	test_no_crash ex07_many_arg    ex07/async-http-collect.js http://httpbin.org/ip http://httpbin.org/user-agent http://api.thecatapi.com/v1/images/search http://abehiroshi.la.coocan.jp/
 	test_no_crash ex07_invalid_url ex07/async-http-collect.js http://www.google.com/ http://www.google.com/ ft_tokyo
 	test_no_crash ex07_invalid_url ex07/async-http-collect.js http://www.google.com/ http://www.google.com/ http://no/
 	test_no_crash ex07_locahost    ex07/async-http-collect.js http://www.google.com/ http://www.google.com/ http://localhost
-	test_no_crash ex07_https       ex07/async-http-collect.js http://www.google.com/ http://www.google.com/ https://google.com
+	test_no_crash ex07_https       ex07/async-http-collect.js http://www.google.com/ http://www.google.com/ https://www.google.com
 }
 
 test_ex08 () {
