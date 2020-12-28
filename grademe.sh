@@ -102,8 +102,8 @@ test_ex01 () {
 
 test_ex02 () {
 	print_header ex02
-	test          ex02_0_arg            ex02/sum_args.js
 	test          ex02_3_args           ex02/sum_args.js 1 2 3
+	test_no_crash ex02_0_arg            ex02/sum_args.js
 	test_no_crash ex02_non_number       ex02/sum_args.js 1 2 3 ft_tokyo
 	test          ex02_minus            ex02/sum_args.js -1 -2 -3 -4
 	test          ex02_max_safe_integer ex02/sum_args.js 9007199254740991
